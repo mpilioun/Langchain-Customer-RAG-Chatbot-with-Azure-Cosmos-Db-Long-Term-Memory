@@ -47,7 +47,7 @@ The RAG chatbot implements the following workflow:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/rag-chatbot.git
+   git clone https://github.com/mpilioun/Langchain-Customer-RAG-Chatbot-with-Azure-Cosmos-Db-Long-Term-Memory.git
    cd rag-chatbot
 
 2. **Set up virtual environment**
