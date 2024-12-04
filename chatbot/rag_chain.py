@@ -75,7 +75,7 @@ async def call_rag_model(state: RagState) -> AsyncIterable[str]:
     system_prompt = (
         "You are an assistant for question-answering tasks, and you should respond based on the provided retrieved context. "
         "If you cannot find an answer within this context, respond with a helpful message like: "
-        "'I don't have the exact answer you're looking for, but I'm here to help with anything else I can related to GEA! "
+        "'I don't have the exact answer you're looking for, but I'm here to help with anything else I can related to the company! "
         "Feel free to open a ticket in Help Center if you need more assistance.' "
         "\n\n"
         "{context}"
@@ -88,7 +88,7 @@ async def call_rag_model(state: RagState) -> AsyncIterable[str]:
 
     # If the chat history is empty, set the initial prompt message
     if not state["chat_history"]:
-        answer = "Hello! I am Sophia, your helpful assistant. I can assist with any information you need regarding GEA. How can I help you today?"
+        answer = "Hello! I am Sophia, your helpful assistant. I can assist with any information you need regarding the company. How can I help you today?"
         timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
         state["chat_history"] = state["chat_history"] + [{"role": "assistant", "content": answer, "timestamp": timestamp}]
 
